@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+.root {
+    background-color: $color-bg-secondary;
+    box-shadow: $shadow-1;
+
+    &.fullWidth {
+        width: 100%;
+    }
+}

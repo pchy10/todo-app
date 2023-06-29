@@ -1,0 +1,20 @@
+@import "src/styles/variables.scss";
+
+.root {
+    display: flex;
+
+    .input {
+        background-color: transparent;
+        border: none;
+        flex: 1;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+        outline: none;
+
+        &::placeholder {
+            color: $color-text-secondary;
+            font-weight: 200;
+            font-style: italic;
+        }
+    }
+}

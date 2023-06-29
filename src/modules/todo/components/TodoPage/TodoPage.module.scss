@@ -1,0 +1,26 @@
+@import "src/styles/variables.scss";
+
+// The .content class is used to center the content of the page
+.root {
+    min-height: 100vh;
+    background-color: $color-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        flex-grow: 1;
+
+        @include for-tablet-and-desktop {
+            max-width: 40rem;
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: 300;
+            color: $color-primary;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}

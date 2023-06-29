@@ -1,0 +1,46 @@
+$font-family: 'Montserrat', sans-serif;
+
+// Colors
+$color-primary: #EBD8D8;
+$color-bg: #F5F5F5;
+$color-bg-secondary: #FFFFFF;
+$color-text: #171E38;
+$color-text-secondary: #A0A0A0;
+
+// Box shadows
+$shadow-1: 0 0.5rem 0.63rem 0 rgba(23, 30, 56, 0.1), 0 0 0.06rem 0 rgba(23, 30, 56, 0.1);
+
+// Media Queries
+$media-large: 1280px;
+$media-medium: 768px;
+$media-small: 576px;
+
+@mixin for-mobile {
+  @media screen and (max-width: #{$media-medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media screen and (min-width: #{$media-medium}) and (max-width: #{$media-large - 1px}) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media screen and (min-width: #{$media-large}) {
+    @content;
+  }
+}
+
+@mixin for-tablet-and-desktop {
+  @media screen and (min-width: #{$media-medium}) {
+    @content;
+  }
+}
+
+@mixin for-mobile-and-tablet {
+  @media screen and (max-width: #{$media-large - 1px}) {
+    @content;
+  }
+}
