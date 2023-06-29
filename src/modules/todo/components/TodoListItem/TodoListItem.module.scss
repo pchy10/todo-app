@@ -1,0 +1,38 @@
+@import "src/styles/variables.scss";
+
+.root {
+    border-right: 0;
+    border-left: 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-bg;
+    }
+
+    .completedTask {
+        text-decoration: line-through;
+        color: $color-text-secondary;
+    }
+
+    .btn {
+        color: $color-text-secondary;
+        fill: $color-text-secondary;
+        margin-left: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-text;
+            fill: $color-text;
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+}

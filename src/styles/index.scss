@@ -30,3 +30,7 @@ input, button, textarea {
   font-family: $font-family;
   color: $color-text;
 }
+
+svg {
+  fill: $color-text;
+}

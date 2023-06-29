@@ -1,0 +1,30 @@
+@import "src/styles/variables.scss";
+
+.root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: $color-text-secondary;
+
+    .status {
+        font-size: 0.8rem;
+    }
+
+    .filterBtn {
+        background-color: transparent;
+        color: $color-text-secondary;
+        
+        &:not(:hover) {
+            border-color: transparent;
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+        &.active {
+            border-color: $color-primary;
+        }
+    }
+}

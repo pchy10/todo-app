@@ -19,38 +19,41 @@ export default function TodoContextProvider({ children }: any) {
   const changeTodo = ({ type, todo }: IChangeTodoArgs) => {
     switch (type) {
       case ChangeTodoType.ADD:
-        setTodos([...todos, { ...todo, id: Date.now(), status: "pending" }]);
+        if (todo) {
+          setTodos([...todos, { ...todo, id: Date.now(), status: "pending" }]);
+        }
         break;
       case ChangeTodoType.DELETE:
-        setTodos(todos.filter((item) => item.id !== todo.id));
+        if (todo) {
+          setTodos(todos.filter((item) => item.id !== todo.id));
+        }
         break;
       case ChangeTodoType.UPDATE:
-        setTodos(
-          todos.map((item) => {
-            return {
-              ...item,
-              title: item.id === todo.id ? todo.title : item.title,
-              status: item.id === todo.id ? todo.status : item.status,
-            };
-          })
-        );
+        if (todo) {
+          setTodos(
+            todos.map((item) => {
+              return {
+                ...item,
+                title: item.id === todo.id ? todo.title : item.title,
+                status:
+                  item.id === todo.id && todo.status
+                    ? todo.status
+                    : item.status,
+              };
+            })
+          );
+        }
         break;
-      case ChangeTodoType.SET_ACTIVE:
-        setTodos(
-          todos.map((item) => {
-            return {
-              ...item,
-              status: item.id === todo.id ? "active" : item.status,
-            };
-          })
-        );
+      case ChangeTodoType.CLEAR_COMPLETED:
+        setTodos(todos.filter((item) => item.status !== "completed"));
         break;
-      case ChangeTodoType.SET_COMPLETED:
+
+      case ChangeTodoType.MARK_ALL_AS_COMPLETED:
         setTodos(
           todos.map((item) => {
             return {
               ...item,
-              status: item.id === todo.id ? "completed" : item.status,
+              status: "completed",
             };
           })
         );

@@ -4,8 +4,8 @@ export enum ChangeTodoType {
   ADD = "ADD",
   UPDATE = "UPDATE",
   DELETE = "DELETE",
-  SET_ACTIVE = "SET_ACTIVE",
-  SET_COMPLETED = "SET_COMPLETED",
+  CLEAR_COMPLETED = "CLEAR_COMPLETED",
+  MARK_ALL_AS_COMPLETED = "MARK_ALL_AS_COMPLETED",
 }
 
 export interface ITodoInput {
@@ -22,7 +22,7 @@ export interface ITodo {
 
 export interface IChangeTodoArgs {
   type: ChangeTodoType;
-  todo: ITodoInput;
+  todo?: ITodoInput;
 }
 
 export interface ITodoContext {
