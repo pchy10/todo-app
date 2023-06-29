@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Todo App with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [SASS](https://sass-lang.com/) & [React-Bootstrap](https://react-bootstrap.netlify.app/)
+
+## Screenshot
+
+![Screenshot of the UI](/public/Screenshot.png)
+
+## Project Directories
+
+This project contains all files in the `./src` directory. The `./src/modules/` directory holds all necessary components including shared components in the `/common` folder.
 
 ## Available Scripts
 
