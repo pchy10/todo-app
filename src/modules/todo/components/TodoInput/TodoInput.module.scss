@@ -3,18 +3,22 @@
 .root {
     display: flex;
 
-    .input {
-        background-color: transparent;
-        border: none;
+    .form {
         flex: 1;
-        padding: 0.5rem 1rem;
-        font-size: 2rem;
-        outline: none;
 
-        &::placeholder {
-            color: $color-text-secondary;
-            font-weight: 200;
-            font-style: italic;
+        .input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 2rem;
+            outline: none;
+    
+            &::placeholder {
+                color: $color-text-secondary;
+                font-weight: 200;
+                font-style: italic;
+            }
         }
     }
 }
